@@ -24,7 +24,7 @@ const isDev = !window.location.href.includes("index.html");
 let href = decodeURIComponent(window.location.href);
 href = href.split("?").slice(0, -1).join("?");
 
-const redirectUri = isDev ? href : "/";
+const redirectUri = isDev ? href : "/callback";
 
 const accountSelectRequest = (scopes: any[] = []) => ({
   scopes,
